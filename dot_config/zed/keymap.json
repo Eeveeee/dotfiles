@@ -84,14 +84,14 @@
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       // Refactoring
-      "space c r ": "editor::Rename",
+      "space r": "editor::Rename",
       // Chat with AI
-      "space a a": "agent::ToggleFocus",
-      "ctrl-\\": "workspace::ToggleRightDock",
-      "ctrl-k": "workspace::ToggleRightDock",
-      "space a e": "assistant::InlineAssist",
-      "ctrl-l": "assistant::InlineAssist",
-      "space a t": "workspace::ToggleRightDock",
+      // "space a a": "agent::ToggleFocus",
+      // "ctrl-\\": "workspace::ToggleRightDock",
+      // "ctrl-k": "workspace::ToggleRightDock",
+      // "space a e": "assistant::InlineAssist",
+      // "ctrl-l": "assistant::InlineAssist",
+      // "space a t": "workspace::ToggleRightDock",
       // Git
       "space g g": [
         "task::Spawn",
@@ -149,7 +149,7 @@
       // Git
       "space g b": "git::Blame",
       // LSP & Code actions
-      "space c a": "editor::ToggleCodeActions",
+      "space a": "editor::ToggleCodeActions",
       "space s d": "diagnostics::Deploy",
       "space s s": "outline::Toggle",
       // Format
@@ -202,10 +202,14 @@
     "bindings": {
       "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
       "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
-      "n": ["workspace::SendKeystrokes", "n z z z v"],
+      "n": ["workspace::SendKeystrokes", "n z z"],
       "shift-n": ["workspace::SendKeystrokes", "shift-n z z z v"],
-      "shift-g": ["workspace::SendKeystrokes", "shift-g z z"],
+      "shift-g": ["workspace::SendKeystrokes", "shift-g z z z v"],
       "g r": "editor::FindAllReferences",
+      "g d": "editor::GoToDefinition",
+      "g D": "editor::GoToDeclaration",
+      "g i": "editor::GoToImplementation",
+      "g t": "editor::GoToTypeDefinition",
     },
   },
   {
